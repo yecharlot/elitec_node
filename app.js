@@ -50,6 +50,10 @@ const users = require('./users');
 const markerRequests = require('./markerRequests');
 const confirmations = require('./confirmations');
 
+app.get('/', (req, res) => {
+  res.send('Servidor activo 🚀');
+});
+
 // Crear la carpeta "public" si no existe
 const publicDir = path.join(__dirname, 'public');
 if (!fs.existsSync(publicDir)) {
